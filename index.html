@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        input,button{
+            padding: 10px;
+            background-color: bisque;
+            margin-top: 20px;
+            margin-left: 20px;
+            font-weight: bold;
+            color:"#9900FF;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body style="background-color:powderblue;">
+    <div class="box">
+        <input type="text" placeholder="Enter any items..." back>
+        <button onclick="add()">add</button>
+    </div>
+
+    <div class="list">
+        <ul style="list-style-type:square">
+            
+        </ul>
+    </div>
+    <script>
+        function add(){
+            let text = document.querySelector('input'); // get the input value
+            let ul = document.querySelector('ul');  // get the ul 
+            let li = document.createElement('li'); // create new list
+
+                if(text.value.trim() !== ''){
+                    li.innerText = text.value; // get the value
+                    ul.appendChild(li);
+                    text.value = ''; // empty input
+                }
+        }
+    </script>
+</body>
+</html>
